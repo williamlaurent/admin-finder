@@ -1,0 +1,10 @@
+admin
+login
+wp-admin
+administrator
+admin/login
+admin.php
+admin/login.php
+wp-login.php
+administrator/login
+login/admin
