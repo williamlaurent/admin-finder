@@ -1,0 +1,3 @@
+Tidak dapat menemukan halaman admin pada https://google.com/
+Tidak dapat menemukan halaman admin pada https://google.co.id/
+Tidak dapat menemukan halaman admin pada https://google.com.my/
