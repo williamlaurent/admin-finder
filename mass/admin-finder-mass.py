@@ -25,13 +25,17 @@ def is_admin_page(url, admin_pages):
 if __name__ == "__main__":
     admin_pages_file = "admin_url.txt"
     urls_file = "urls.txt"
+    results_file = "results.txt"
 
     admin_pages = load_admin_pages(admin_pages_file)
     target_urls = load_urls(urls_file)
 
-    for url in target_urls:
-        is_admin, admin_url = is_admin_page(url, admin_pages)
-        if is_admin:
-            print(f"Admin page ditemukan pada {admin_url}")
-        else:
-            print(f"Tidak dapat menemukan halaman admin pada {url}")
+    with open(results_file, "w") as results:
+        for url in target_urls:
+            is_admin, admin_url = is_admin_page(url, admin_pages)
+            if is_admin:
+                results.write(f"Admin page ditemukan pada {admin_url}\n")
+            else:
+                results.write(f"Tidak dapat menemukan halaman admin pada {url}\n")
+
+    print("Pencarian selesai. Hasil disimpan di results.txt")
